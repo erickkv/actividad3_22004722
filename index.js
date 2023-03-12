@@ -14,6 +14,7 @@ let nocheImg = document.getElementById('clima-noche-img');
 let nocheFooter = document.getElementById('clima-noche-footer');
 let fechaHeader = document.getElementById("fecha-header");
 let tituloFecha = document.getElementById("titulo-fecha");
+let boton = document.getElementById("boton");
 
 formulario.addEventListener('submit', function(evento) {
     //para la fecha se agrega esto: "replace(/-/g, '\/')", esto la cambia de 2023-02-02 a 2023/02/02
@@ -31,10 +32,11 @@ formulario.addEventListener('submit', function(evento) {
     }
     if (fechaSeleccionada.value && isToday(fechaIngresada)) {
         tituloFecha.innerHTML = "Pron&oacute;stico para el d&iacutea de hoy: " + fechaIngresada.toLocaleDateString();
-
-        mostrarClimaHoy(() => {return true});
+        boton.disabled = true;
+        mostrarClimaHoy(() => {boton.disabled = false;});
     } else if((fechaSeleccionada.value && !isToday(fechaIngresada))) {
-        mostrarClimaOtroDia(() => {return true});
+        boton.disabled = true;
+        mostrarClimaOtroDia(() => {boton.disabled = false;});
     }
 
 });
