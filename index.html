@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clima</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 id="titulo-fecha">Seleccione una fecha</h1>
+        <div id="select-fecha">
+            <form id="form-fecha">
+                <input type="date" id="fecha-select"/>
+                <input type="submit" value="SELECCIONAR FECHA" class="button"/>
+            </form>
+        </div>
+        <h2 id="fecha-header"></h2>
+        <div class="grid-container" id="clima-del-dia">
+            <div id="clima-morn" class="card">
+                <div id="clima-morn-header" class="clima-header" hidden></div>
+                <div id="clima-morn-img" ></div>
+                <div id="clima-morn-footer" ></div>
+            </div>
+            <div id="clima-tarde" class="card">
+                <div id="clima-tarde-header" class="clima-header" hidden></div>
+                <div id="clima-tarde-img" ></div>
+                <div id="clima-tarde-footer" ></div>
+            </div>
+            <div id="clima-noche" class="card">
+                <div id="clima-noche-header" class="clima-header" hidden></div>
+                <div id="clima-noche-img"></div>
+                <div id="clima-noche-footer"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
